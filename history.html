@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歷史紀錄 - 選擇題練習網頁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← 返回首頁</a>
+        
+        <div class="history-container">
+            <h2>歷史紀錄</h2>
+            <div class="filter-buttons">
+                <button class="filter-button active" onclick="filterHistory('all')">全部</button>
+                <button class="filter-button" onclick="filterHistory('wrong')">只顯示答錯</button>
+            </div>
+            <div style="margin: 20px 0;">
+                <a href="review-wrong.html" class="btn btn-primary" style="text-decoration: none; display: inline-block;">
+                    🔄 錯誤重做
+                </a>
+            </div>
+            <div id="historyList"></div>
+        </div>
+    </div>
+    
+    <script src="history.js"></script>
+</body>
+</html>
+

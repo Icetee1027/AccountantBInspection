@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>錯誤重做 - 選擇題練習網頁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="history.html" class="back-button">← 返回歷史紀錄</a>
+        
+        <div id="questionCountSelection" class="question-count-selection">
+            <h2>選擇要複習的題目數量</h2>
+            <p style="color: #666; margin-bottom: 20px;">
+                目前共有 <span id="wrongCount" style="font-weight: 600; color: #667eea;">0</span> 題錯誤題目
+            </p>
+            <div class="count-buttons" id="countButtons"></div>
+        </div>
+        
+        <div id="questionContainer" class="question-container" style="display: none;">
+            <div class="question-header">
+                <span class="question-number" id="questionNumber">題目 1 / 10</span>
+            </div>
+            <div class="question-text" id="questionText"></div>
+            <div class="options-container" id="optionsContainer"></div>
+            <div class="control-buttons">
+                <button class="btn btn-secondary" onclick="goBackToSelection()">返回選擇</button>
+                <button class="btn btn-secondary" onclick="previousQuestion()" id="prevButton" style="display: none;">上一題</button>
+                <button class="btn btn-secondary" onclick="nextQuestion()" id="nextButton" style="display: none;">下一題</button>
+                <button class="btn btn-success" onclick="submitReview()" id="submitButton" style="display: none;">完成作答</button>
+            </div>
+        </div>
+        
+        <div id="resultContainer" class="result-container" style="display: none;">
+            <div class="result-score" id="resultScore"></div>
+            <div class="result-text" id="resultText"></div>
+            <div class="question-container" id="resultQuestions"></div>
+            <div class="control-buttons">
+                <button class="btn btn-primary" onclick="goBackToSelection()">返回選擇</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="review-wrong.js"></script>
+</body>
+</html>
+
